@@ -1,0 +1,61 @@
+function setup() {
+  createCanvas(400, 400);
+  frameRate(10);
+}
+
+  
+function draw() {
+    background(0, 40);
+  noStroke();
+  ellipse((200), (200), random(30, 300));
+  
+  //t
+    if (keyIsDown(84)){
+    mySound1.play();
+  }
+  //g
+  if (keyIsDown(71)){
+    mySound2.play();
+  }
+  //a
+    if (keyIsDown(65)){
+    mySound3.play();
+  } 
+  //e
+  if (keyIsDown(69)){
+    mySound4.play();
+  }
+  //h
+   if (keyIsDown(72)){
+    mySound5.play();
+  }
+  //r
+   if (keyIsDown(82)){
+    mySound6.play();
+  }
+  
+ if (keyIsDown(32)){
+   fill(random(255), random(255), random(255));
+  }
+  
+  
+  
+  
+    
+  
+  if (mouseIsPressed) {
+  fill(random(255), random(255), random(255));
+  } else {
+    ellipse((200), (200), random(30, 300));
+  }
+}
+
+function preload(){
+   soundFormats("mp3");
+  mySound1=loadSound("1a.wav");
+  mySound2=loadSound("2a.wav");
+  mySound3=loadSound("3a.wav");
+  mySound4=loadSound("4a.wav");
+  mySound5=loadSound("5a.wav");
+  mySound6=loadSound("6a.wav");
+}
